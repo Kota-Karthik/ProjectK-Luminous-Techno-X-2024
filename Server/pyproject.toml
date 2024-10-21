@@ -6,8 +6,13 @@ authors = ["kota-karthik <kotakarthik2307@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
-statsmodels = "^0.14.4"
+python = "^3.12"
+flask = "^2.3.2"
+joblib = "^1.2.0"
+numpy = "^1.23.0"
+pandas = "^1.5.3"
+scikit-learn = "^1.2.0"
+statsmodels = "^0.13.5"
 
 
 [build-system]
