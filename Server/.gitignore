@@ -38,3 +38,4 @@ static/
 *.pyo
 *.pyd
 *.pyc
+*.pkl
