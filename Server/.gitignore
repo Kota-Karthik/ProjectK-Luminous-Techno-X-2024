@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+.ENV/
+
+# Flask instance folder
+instance/
+
+# Flask static files
+static/
+
+# Flask cache files
+*.log
+*.pot
+*.pyc
+*.pyo
+
+# Local environment variables
+.env
+*.env
+
+# Pytest cache
+.pytest_cache/
+
+# IDE settings and project files
+.idea/
+.vscode/
+*.swp
+
+# Bytecode and compiled Python files
+*.pyo
+*.pyd
+*.pyc
