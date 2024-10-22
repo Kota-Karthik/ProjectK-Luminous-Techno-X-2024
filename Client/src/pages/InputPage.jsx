@@ -1,6 +1,9 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const InputPage = ({setSavedResponse}) => {
+
+const InputPage = () => {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         temperature: '',
         humidity: '',
@@ -27,7 +30,15 @@ const InputPage = ({setSavedResponse}) => {
                 body: JSON.stringify(formData),
             });
             const result = await response.json();
-            setSavedResponse(JSON.stringify(result));
+            const check=localStorage.getItem("data");
+            if(check!=null){
+                localStorage.removeItem("data");
+                localStorage.setItem("data",JSON.stringify(result));
+            }else{
+                localStorage.setItem("data",JSON.stringify(result));
+            }
+            
+            navigate('/result');
             // console.log(JSON.stringify(result));
             // alert('Optimization result: ' + JSON.stringify(result));
         } catch (error) {
