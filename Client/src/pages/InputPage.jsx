@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const InputPage = () => {
+const InputPage = ({setSavedResponse}) => {
     const [formData, setFormData] = useState({
         temperature: '',
         humidity: '',
@@ -27,7 +27,8 @@ const InputPage = () => {
                 body: JSON.stringify(formData),
             });
             const result = await response.json();
-            console.log(JSON.stringify(result));
+            setSavedResponse(JSON.stringify(result));
+            // console.log(JSON.stringify(result));
             // alert('Optimization result: ' + JSON.stringify(result));
         } catch (error) {
             // console.error('Error:', error);

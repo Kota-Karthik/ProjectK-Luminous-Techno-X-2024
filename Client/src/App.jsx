@@ -1,14 +1,15 @@
+import './App.css';
+import InputPage from './pages/InputPage';
+import { useState } from 'react';
 
-import './App.css'
-import './pages/InputPage'
-import InputPage from './pages/InputPage'
 function App() {
+  const [savedResponse, setSavedResponse] = useState(null);
 
   return (
     <>
-      <InputPage/>
+      <InputPage setSavedResponse={setSavedResponse}/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
