@@ -1,14 +1,14 @@
 import './App.css';
 import InputPage from './pages/InputPage';
-import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
-  const [savedResponse, setSavedResponse] = useState(null);
-
   return (
-    <>
-      <InputPage setSavedResponse={setSavedResponse}/>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<InputPage />} />
+      </Routes>
+    </Router>
   );
 }
 
