@@ -42,7 +42,7 @@ const InputPage = () => {
             // console.log(JSON.stringify(result));
             // alert('Optimization result: ' + JSON.stringify(result));
         } catch (error) {
-            // console.error('Error:', error);
+            console.error('Error:', error);
             alert('An error occurred');
         }
     };
