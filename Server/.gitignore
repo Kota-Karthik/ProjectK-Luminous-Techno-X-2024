@@ -39,3 +39,4 @@ static/
 *.pyd
 *.pyc
 *.pkl
+.vercel
