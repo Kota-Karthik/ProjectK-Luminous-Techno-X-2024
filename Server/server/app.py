@@ -43,8 +43,5 @@ def optimize_energy_usage_route():
 
 
 
-def run():
-    from waitress import serve
-    serve(app, host="0.0.0.0", port=5000)
-
-    # app.run()
+def main(environ, resp):
+    app.run()
