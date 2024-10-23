@@ -22,7 +22,8 @@ const InputPage = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:5000/optimize_energy_usage', {
+            const BACKEND_URL="https://projectk-luminous-techno-x-2024-8.onrender.com/optimize_energy_usage"
+            const response = await fetch( BACKEND_URL || 'http://localhost:5000/optimize_energy_usage' , {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
