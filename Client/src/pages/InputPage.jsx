@@ -23,6 +23,7 @@ const InputPage = () => {
         e.preventDefault();
         try {
             const BACKEND_URL="https://projectk-luminous-techno-x-2024-8.onrender.com/optimize_energy_usage"
+            console.log("request sent")
             const response = await fetch( BACKEND_URL || 'http://localhost:5000/optimize_energy_usage' , {
                 method: 'POST',
                 headers: {
@@ -38,7 +39,7 @@ const InputPage = () => {
             }else{
                 localStorage.setItem("data",JSON.stringify(result));
             }
-            
+            console.log("response received")
             navigate('/result');
             // console.log(JSON.stringify(result));
             // alert('Optimization result: ' + JSON.stringify(result));
