@@ -43,7 +43,7 @@ def optimize_energy_usage_route():
 
 
 
-if __name__ == '__main__':
+def run():
     from waitress import serve
     serve(app, host="0.0.0.0", port=5000)
 
