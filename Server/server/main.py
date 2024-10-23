@@ -56,6 +56,8 @@ def forecast_energy_consumption(consumption_data):
         endtime = time.time()
         global total
         total += (endtime - start)
+        if not os.path.exists("models"):
+            os.mkdir("models")
         with open("models/consumption_model.pkl", "wb") as f:
             joblib.dump(consumption_model, f)
 
@@ -86,6 +88,8 @@ def forecast_solar_energy(solar_data):
         endtime = time.time()
         global total
         total += (endtime - start)
+        if not os.path.exists("models"):
+            os.mkdir("models")
         with open("models/solar_model.pkl", "wb") as f:
             joblib.dump(solar_model, f)
     
